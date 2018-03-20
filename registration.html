@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>haptic registration</title>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="com-md-6 col-md-offset-3">
+                    <p class="lead">Registered candidates are expected to make the payment on the day of the workshop</p>
+                    <p class="lead">Enter the credentials of any one member in your team</p>
+                    <form action="/registration/haptic">{% crsf_token %}
+                        <input type="text" name="name" placeholder="Name" class="form-control"/><br>
+                        <input name="phone_no" placeholder="Phone Number" class="form-control"/><br>
+                        <input name="coll_name" placeholder="College Name" class="form-control"/><br>
+                        <input name="email" placeholder="Email" class="form-control"/><br>
+                        <input name="city" placeholder="City" class="form-control"/><br>
+                        Is accomodation needed ? <input type='checkbox' name="accomodation" checked="1"/><br>
+                        <input name="male" placeholder="No Of Male Members eg: 2" class="form-control"/><br>
+                        <input name="female" placeholder="No Of Female Members eg: 3" class="form-control"/><br>
+                        <button class="btn btn-lg btn-primary">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

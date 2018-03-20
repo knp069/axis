@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Axis'15 | Events</title>
+	<link rel="shortcut icon" href="favicon.ico">
+    <!-- bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!-- Feather Icons -->
+	<link rel="stylesheet" type="text/css" href="fonts/feather/style.css">
+	<!-- General demo styles & header -->
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<!-- Component styles -->
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="cssnav/component-nav.css"/>
+    <link rel="stylesheet" type="text/css" href="cssnav/custom-nav.css"/>
+    <link rel="stylesheet" href="cssnav/default-nav.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-override.css"/>
+ 	<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+	<!-- Main container -->
+	<div class="container">
+        <div class="main clearfix">
+            <nav id="menu" class="nav">					
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Workshops</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Exhibitions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Sponsors</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Contacts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/final.png" width="80%"/>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+		</div>
+	<script>
+			//  The function to change the class
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+			//  Creating our button in JS for smaller screens
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i class="fa fa-lg fa-2x fa-bars"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/final.png" width="60%"/></button>');
+
+			//  Toggle the class on click to show / hide the menu
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+		</script>
+        </div>
+        <div class="container">
+		<section class="slider">
+			<div class="slide slide--current" data-content="content-1">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/techverve2.png" alt="iPhone" />
+						<div class="preview">
+							
+							<div class="zoomer__area zoomer__area--size-2"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">Animazione</h2>
+			</div>
+			<div class="slide" data-content="content-2">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/wall%20street.png" alt="iPad Mini" />
+						<div class="preview">
+							
+							<div class="zoomer__area zoomer__area--size-4"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">WALLSTREET</h2>
+			</div>
+			<div class="slide" data-content="content-3">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/construction.png" alt="MacBook" />
+						<div class="preview">
+							
+							<div class="zoomer__area zoomer__area--size-3"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">CREPIDO</h2>
+			</div>
+			<div class="slide" data-content="content-4">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/crepido.png" alt="iMac" />
+						<div class="preview">
+							
+							<div class="zoomer__area zoomer__area--size-5"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">PARADEIGMA</h2>
+			</div>
+			<div class="slide" data-content="content-5">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/wtb.png" alt="Apple Watch" />
+						<div class="preview rounded">
+							
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">WHO'S THE BOSS</h2>
+			</div>
+            <div class="slide" data-content="content-6">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/robowars.png" alt="Apple Watch" />
+						<div class="preview rounded">
+							
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">ROBOWARS</h2>
+			</div>
+            <div class="slide" data-content="content-7">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/mechatryst.png" alt="Apple Watch" />
+						<div class="preview rounded">
+							
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">MECHATRYST</h2>
+			</div>
+            <div class="slide" data-content="content-8">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/221B.png" alt="Apple Watch" />
+						<div class="preview rounded">
+							
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">221B BAKER STREET</h2>
+			</div>
+            <div class="slide" data-content="content-9">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/turboflux.png" alt="Apple Watch" />
+						<div class="preview rounded">
+							
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">TURBO FLUX</h2>
+			</div>
+            <div class="slide" data-content="content-10">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/freakomatrix.png" alt="Apple Watch" />
+						<div class="preview rounded">
+							
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">FREAK O MATRIX</h2>
+			</div>
+            <div class="slide" data-content="content-11">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/aquahunt.png" alt="AQUA HUNT" />
+						<div class="preview rounded">
+							
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">AQUA HUNT</h2>
+			</div>
+            <div class="slide" data-content="content-12">
+				<div class="slide__mover">
+					<div class="zoomer flex-center">
+						<img class="zoomer__image" src="assets/img/dexter.png" alt="Apple Watch" />
+						<div class="preview rounded">
+							
+							<div class="zoomer__area zoomer__area--size-1"></div>
+						</div>
+					</div>
+				</div>
+				<h2 class="slide__title">DEXTER</h2>
+			</div>
+			<nav class="slider__nav">
+				<button class="button button--nav-prev"><i class="icon icon--arrow-left"></i><span class="text-hidden">Previous Event</span></button>
+				<button class="button button--zoom"><i class="icon icon--zoom"></i><span class="text-hidden">View details</span></button>
+				<button class="button button--nav-next"><i class="icon icon--arrow-right"></i><span class="text-hidden">Next Event</span></button>
+			</nav>
+		</section>
+		<!-- /slider-->
+		<section class="content">
+			<div class="content__item" id="content-1">
+                <img class="content__item-img rounded-right" src="assets/img/animazione.jpg" alt="iPad Mini Content" />
+				<div class="content__item-inner row">
+                    <div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                        Clean water scarcity has become one of the big problems in India and other countries all over the world affecting people’s lives in many ways. This big problem cannot be solved alone or only a group of some people, it is the problem which needs global efforts of people together.
+	With judicious use of animation and visual effects, the most mundane system utility can become a rich visual experience. And we at Animazione are here to just do that, to gauge how compelling a competetive advantage you possess in this art form of dynamic images synthesised out of your thoughts. Give us an insight into your ‘visual vocabulary’ and we give you the right place to showcase it here at AXIS 15.So get ready and breathe life into characters and ideas that might never have existed but for your imagination into the world that you have invented.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"> PROBLEM STATEMENT </a>
+                                </p>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+                                        The event consists of 3 rounds in total, the first round which will be a general aptitude test will be open for all. Selected participants from each round will proceed to the next round. The second round will be where the participants will be separated into teams and a game will be played amongst these teams that will test their resource management skills. The third round will consist of a group discussion and further interviews with out panel of judges.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">RULES</a>
+                                </p>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                        <ol type="I">
+											<li>The participants may be a student of animation/academic institution or a freelancer or even a professional.</li>
+											<li>Entries can be submitted individually or in group (max 2 member).</li>
+											<li>Participants can use still images (any format), Basic animated objects or small video clips.</li>
+											<li>Participants can use any software of his/her choice (Adobe After Effects, Adobe Photoshop, Blender, 3D Studio Max, Maya, Cinema 4D, etc.).</li>
+											<li>Each participant can submit only a single entry; in case of multiple entries latest one will be considered.</li>
+											<li>The video of the above theme should be of at least 1 minute (Note: The time slot excluding Animazione Pre-loader and an unnecessary long introduction).</li>
+											<li>Entry must contain the Animazione Pre-loader (To be updated soon).</li>
+											<li>Entry must contain a small 'www.axisvnit.org' text in the top/Bottom right corner of the entire animation (including credits) linking to AXIS’15.</li>
+											<li>Deadline for entries for ANIMAZIONE is October 10 2015. Any entry after the deadline shall not be accepted.</li>
+											<li>Entry must have at least WVGA resolution (768 × 480). Aspect ratio doesn't matters.</li>
+											<li>Entry can be submitted in any of the popular format.</li>
+											<li>Do not put your name or contact info anywhere on the actual video (Same can be done in credits).</li>
+											<li>Entry must not be released to the general public until released by Animazione.</li>
+											<li>Once an Entry is submitted, it cannot be withdrawn from the competition.</li>
+
+                                        </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"> TERMS AND CONDITIONS </a>
+                                </p>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse">
+                                <div class="panel-body">
+									<ol>
+										<li>ANIMAZIONE is not responsible for any claims and rights of the copyright holders, if any in literary ,dramatic ,musical ,or other material ,including stories ,plays ,scripts , scenarios, themes ,incidents, plots, characteristics, themes, incidents, plots, music appearing used or recorded in your film. You agree to take on all copyright liability in regard to the submitted film.</li>
+
+										<li>By submitting your film, you grant ANIMAZIONE the permission to use your film (in part or whole) for the purpose of promoting and advertising ANIMAZIONE and future festivals. You consent to your film being available for viewing by the ANIMAZIONE jury members, media and general public.</li>
+										
+										<li>ANIMAZIONE may periodically revise the terms of this agreement by updating this page. You should periodically visit this page to review the current terms of service.</li>
+
+									</ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"> JUDGING CRITERIA </a>
+                                </p>
+                            </div>
+                            <div id="collapse5" class="panel-collapse collapse">
+                                <div class="panel-body">
+									<p>
+										<p>Winners are judged by jury of invited industry professionals. All jury decisions are final and binding.</p>
+										<p>Any overtly offensive content as judged by the jury stands disqualified.</p>
+										<p>Judging will include following criteria :</p>
+									</p>
+									<ol>
+										<li>
+											<b>Originality/creativity</b>
+											<p>Is this entry a new idea? Or have we seen it dozens of times before?</p>
+										</li>
+										<li>
+											<b>Theme match</b>
+											<p>How well does this submission relate to the theme?</b>
+										 </li>
+										 <li>
+											<b>Technical difficulty</b>
+											<p>How technically challenging is the implementation?</p>
+										</li>
+										<li>
+											<b>Quality</b>
+											<p>How well is it executed? Does it have especially attractive original graphics?</P>
+									 	</li>
+										<li>
+											<p>Good submissions do not need to score highly on all criteria, but should aim to score high on several of the criteria, and not too low on any.</p>
+										</li>
+									</ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6"> FAQ </a>
+                                </p>
+                            </div>
+                            <div id="collapse6" class="panel-collapse collapse">
+                                <div class="panel-body">
+									<ol>
+										<li>
+											<b>Q. What is the difference in animation 2D and 3D?</b>
+											<p>The most obvious difference between the two genres of animation is the three dimensional characteristics or the appearance of depth. 2D animation is created by drawing almost every frame of the animated movie and is the base of 3D animation. 3D animation is created by changing the poses and the placement of already created 3D models. It has more depth and is more realistic, it is a series of images/ objects created using computers or any other digital media.</p>
+										</li>
+										<li>
+											<b>Q.  How do I submit my entry to the competition?</b>
+											<p>Submission can be done by uploading video to youtube followed by sharing link to <a href="mailto://animazione@axisvnit.org">animazione@axisvnit.org</a> with subject “Animation, Animazione Axis’ 15”.</p>
+										</li>
+										<li>
+											<b>Q.  How many people can be in a team?</b> 
+											<p>Team member limits are: Minimum 1, maximum 2.</p>
+										</li>
+										<li>
+											<b>Q.  I am older than 19 – can I enter?</b>
+											<p>Yes, there is no age restriction.</p>
+
+										</li>
+										<li>
+											<b>Q.  Can I make a film about anything I want? </b>
+											<p>Your animation can be about anything you want, with one constraint: it must satisfy problem statement and should not violate any of the rules – the only limit is your imagination!</p> 
+										</li>
+										<li>
+											<b>Q.  My film is longer than 1 minute. Will it be considered ?</b> 
+											<p>Yes, provided it does not exceed 2 minute.</p>
+										</li>
+										<li>
+											<b>Q.  My film is smaller than 1 minute. Will it be considered ?</b> 
+											<p>No, minimum limit is 1 minute.</p>
+										</li>
+										<li>
+											<b>Q.  Can I use copyrighted material such as music or images in an animation?</b>
+											<p>Sure, as long as you own the copyright to that material i.e. you have obtained a copy legally. If your entry incorporates music or sound samples, or images, or any material you have obtained from some other source, you must own the rights to use that material. If you don’t have rights to use the material, then, if you win a prize in our competition, and your work is displayed publically, you may find yourself in breach of copyright.</p>
+										</li>
+										<li>
+											<b>Q.  Can I use any program to make my animation ?</b> 
+											<p>Yes.</p>
+										</li>
+									</ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<div class="content__item" id="content-2">
+				<img class="content__item-img rounded-right" src="assets/img/wall-street.jpg" alt="iPad Mini Content" />
+				<div class="content__item-inner">
+					<div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse11"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse11" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                        WALLSTREET is a virtual stock market event, played with assets and liquidities, en-cashing your profits and getting
+                                        the "Bang of The Buck" as they say. Ever wonder what it would feel like to become an instant millionaire just because
+                                        you invested in the right company? Well, stop wondering! With our virtual stock market, you can find out for yourself.
+                                        Buy and sell shares and try to make as much as profit as possible. But don't worry, we have a prize for the one with 
+                                        most loss as well! So go ahead and try your luck, it's definitely not rocket science.
+                                        
+                                        “The main thing about money, Bud, is that it makes you do things you don’t want to do.” -These are the famous words said 
+                                        by Lou Mannheim and we at 'WALLSTREET' have totally experienced this thing. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse12"> RULES </a>
+                                </p>
+                            </div>
+                            <div id="collapse12" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+                                        As Mr. Warren Buffet rightly quoted, this game of stocks can be played by keeping in mind just 2 rules: 
+                                    </p>
+                                    <ul>
+                                        <li>Rule #1: Never lose money.</li>
+                                        <li>Rule #2: Never forget Rule#1.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+				</div>
+			</div>
+			<div class="content__item" id="content-3">
+				<img class="content__item-img rounded-right" src="assets/img/Crepido.JPG" alt="crepido content" />
+				<div class="content__item-inner">
+					<div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse21"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse21" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                        There’s more to bridges than meets the eye… They are marvels of engineering and city icons because of their immense influence.
+                                        AXIS/CREPIDO 2015 brings to you an opportunity to showcase your own marvel – A Bridge flaunting an immaculate blend of creativity 
+                                        and dexterity. Bring a robust and captivating one and remember…Triangles are strong!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse22"> PROBLEM STATEMENT </a>
+                                </p>
+                            </div>
+                            <div id="collapse22" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+                                        A rise in demand of coal, oil and other minerals was envisaged by the government of a thriving state. 
+                                        They, after days of discussion opted for the use of railroads to transport the minerals and oils. It 
+                                        was favoured as it would allow to transport greater amount of goods in a less time. Moreover, it avoided
+                                        roadway congestion. A government contractor was assigned the project to lay down railway tracks to facilitate
+                                        the transport of minerals and oils to the state. But the railway lines could not be connected as they 
+                                        encountered a river. Engineers decided to connect the railway lines through a truss bridge over the river 
+                                        which would have the strength to bear a heavy freight locomotive.
+                                    </p>
+                                    <p>
+                                        Now, imagine yourself in their position and construct a truss bridge using popsicle sticks. Use your inventiveness
+                                        to make a sturdy and aesthetically pleasing bridge.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<div class="content__item" id="content-4">
+				<img class="content__item-img rounded-right" src="assets/img/" alt="paradeigma content" />
+				<div class="content__item-inner">
+					<div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse31"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse31" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                        The most impromptu event which is famous for being simple yet challenging for the productive minds . Model-making event , solely requiring application of your engineering skills on day-to-day life’s simple objects to achieve a model satisfying the given problem statement. The registration fees being minimum as per the apparatus provided . And with exciting cash prizes ,you just can not miss this event 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse32"> PROBLEM STATEMENT </a>
+                                </p>
+                            </div>
+                            <div id="collapse32" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+                                        The problem statement is what makes this event exciting and different , which will be provided to the participants with the apparatus after they register themselves , on-the-spot !!! 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse33">RULES</a>
+                                </p>
+                            </div>
+                            <div id="collapse33" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                        <ol type="I">
+                                            <li>It is an on the spot event ,therefore problem statement along with the materials required would be given to the participants at the time of event only.</li>
+                                            <li>You can only use materials given in the kit and nothing else other than what is provided to you,else it will lead to disqualification.</li>
+                                            <li>Participants will be given a stipulated period of time for making their model and submitting it on the spot for testing.</li>
+                                            <li>No pre- registration required but participants may register for an AXIS ID on axisvnit.org.</li>
+                                            <li>A team should consist of min 2 and max 4 members.</li>
+                                            <li>Students from any college, year, branch or school can form a team provided they have valid ID card.</li>
+                                            <li>Judges Decision will be final and any argument with the co-ordinators and event mangers may lead to disqualification.</li>
+                                        </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<div class="content__item" id="content-5">
+				<img class="content__item-img rounded-right" src="assets/img/Who%20is%20the%20boss.jpg" alt="who's the boss Content" />
+				<div class="content__item-inner">
+					<div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse41"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse41" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                        The management extravaganza. The game of the leaders. Come one and come all to this resource management test. A business management game that tests your managerial skills to the extreme. The aim is to achieve a level of maximum profit with the resources made available. In short its the event which tests you in the skills which are in demand today in the market. Not for the shy, but for those who dare to take calculated risks in a simulated environment with actual real-life avenues. This October it gets larger than life, for you are the CEO of your own Company.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse42"> PROBLEM STATEMENT </a>
+                                </p>
+                            </div>
+                            <div id="collapse42" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+                                        The event consists of 3 rounds in total, the first round which will be a general aptitude test will be open for all. Selected participants from each round will proceed to the next round. The second round will be where the participants will be separated into teams and a game will be played amongst these teams that will test their resource management skills. The third round will consist of a group discussion and further interviews with out panel of judges.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse43">RULES</a>
+                                </p>
+                            </div>
+                            <div id="collapse43" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                        <ol type="I">
+                                            <li>This event is open to all college students free of cost.</li>
+                                            <li>The competition is open for individual participants and not as group/team from any college.</li>
+                                            <li>Participants need to carry valid ID Cards of their respective educational institutes.</li>
+                                            <li>The selection for main round will be purely based on the eliminations conducted before main event.</li>
+                                            <li>The decision of Event Managers shall be treated as final and binding on all. They have rights to verify identity of participants if required.</li>
+                                        </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<div class="content__item" id="content-6">
+				<img class="content__item-img rounded-right" src="assets/img/Wars.JPG" alt="robowars" />
+				<div class="content__item-inner">
+					<div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse51"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse51" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                        The stage is set .Its time for the most brutish of all the robotics events toelectrify the atmosphere. Robowars is bsck woth a Roar! <b>SEEK AND DESTROY </b> .As simple as it can get , it is a battle of life and death. the fittest may or may not survive but the simplest will. Fiercely battled among teams from all over the country it is a fest for the crowd. Get ready for the Ultimate showdown! We welcome you to the future of wrestling.
+                                    </p>
+                                    <p>Watch out this AXIS as the wars begin !!</p>
+                                    <p>Come, conquer and taste victory</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse52"> PROBLEM STATEMENT </a>
+                                </p>
+                            </div>
+                            <div id="collapse52" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <h3>
+                                       Opponent should TREMBLE!!
+                                    </h3>
+                                    <p>
+                                        Design and fabricate a wired/wireless, manually controlled robot capable of being victorious in the battlefield. The main objective should be to immobilize/destroy the opponent (your choice :P).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse53">RULES</a>
+                                </p>
+                            </div>
+                            <div id="collapse53" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                        <ol type="I">
+                                            <li>The maximum number of participants allowed per team is 6.</li>
+                                            <li>Max permissible weight of the robot:45 Kg (excluding power supply).</li>
+                                            <li>Cylinders for Pneumatics are excluded from the weight of the robot, if and only if they are kept outside the arena at all times. Such robots are not eligible for wireless bonus.</li>
+                                            <li>Cylinder pressure limit for pneumatics is 5 bar.</li>
+                                            <li>36 volts between any two points in the circuit.</li>
+                                            <li>Wireless robots will have an advantage in case of a tie.
+</li>
+                                            <li>Use of Pneumatics is permitted.
+</li>
+                                            <li>Any arrangement made only for hoisting the cables is not counted in maximum height limit.
+</li>
+                                            <li>Participants must provide means(nozzle) to measure the cylinder pressure.
+</li>
+                                            <li>All bot should have  easily visible and controlled mobility in order to compete.
+</li>
+                                            <li>COMPRESSER in any case will not be allowed.</li>
+                                            <li>The event managers will have a final say in all the matters which occur during the event
+</li>
+                                        </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse54"> REFRAIN FORM THESE </a>
+                                </p>
+                            </div>
+                            <div id="collapse54" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ol>
+                                        <li>Wireless Robot should ensure zero interference.</li>
+                                        <li>Do not use any tether cables, projectiles, nets.</li>
+                                        <li>No chemical, inflammable or incendiary weapons are allowed.</li>
+                                        <li>No liquids are allowed.</li>
+                                        <li>Robots should not employ any RF jammers or any other similar equipment.</li>
+                                        <li>If any robot tries to or damages the arena the robot will be disqualified.</li>
+                                        <li>The event managers will have a final say in all the matters which occur during the event.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse55"> FAQ </a>
+                                </p>
+                            </div>
+                            <div id="collapse55" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ol>
+                                        <li>
+                                            <p><b>
+                                               1. Can members of the team be from different colleges?  
+                                            </b></p>
+                                            <p>
+                                                Yes. They can be from different colleges provided they have a valid id card 
+
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p><b>
+                                               2. Are there any restrictions on the Department of the participant?  
+                                            </b></p>
+                                            <p>
+                                              No   
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p><b>
+                                               3. Will power supply sockets be provided by the organizers? 
+                                            </b></p>
+                                            <p>
+                                                The participants will be provided with one 220V socket for powering up your bot. If the bot uses external power sources like battery, then it must be brought by the participants themselves.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<div class="content__item" id="content-7">
+				<img class="content__item-img rounded-right" src="assets/img/Mechtryst.JPG" alt="mechatryst" />
+				<div class="content__item-inner">
+					<p><a href="https://www.apple.com/watch/new-ways-to-connect/">Learn more about new ways to connect &xrarr;</a></p>
+					<div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse61"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse61" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                      If everything seems under control you’re just not going fast enough....so this year AXIS’15 Mechatryst unveils the most breathtaking
+IC engine racing events ever witnessed by the race fanatics. There couldn’t be any sound better than the IC engine buggies revving
+ at high alacrities. These machines not only gushes adrenaline in your veins but also animates a better racer and a better engineer
+ in you. So abide the race tracks to witness the storming pistons, jubilance and nail biting finishes!  
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse62"> PROBLEM STATEMENT </a>
+                                </p>
+                            </div>
+                            <div id="collapse62" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+                                        Please refer the following <a href="#" >document</a> for the problem statement.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse63">RULES</a>
+                                </p>
+                            </div>
+                            <div id="collapse63" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                        <p>please refer the following <a href="" >document</a> for the rules .</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<div class="content__item" id="content-8">
+				<img class="content__item-img rounded-right" src="assets/img/bakerstreet.jpg" alt="baker street content" />
+				<div class="content__item-inner">
+					<div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse71"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse71" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+                                        You have never faced anything like this.
+                                    </p>
+                                    <p>
+Experience the most thrilling, innovative and challenging quiz contest you have ever encountered. Every pixel will count as you strive to decode the impenetrable web of each question in your effort to reach the grand prize. You will be sent to every corner of the web; you will have to use every skill and tool at your disposal; you will have to wield Google as your personal pen knife to stand a chance of cutting through the veil of mystery we will lay before your eyes. Take a gander down 221B Baker Street.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse72">PROBLEM STATEMENT</a>
+                                </p>
+                            </div>
+                            <div id="collapse72" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+                                        221B Baker Street is an online quiz event, held on the AXIS ’15 website. It consists of two sub-events, General Mode and Story Mode. Instructions specific to each mode will be displayed on the event page prior to commencement of the Mode. Both Modes consist of questions in the form of a series of images presented to the participant. The participant has to deduce the answer from said image, taking the help of any and all resources at her/his disposal. The winner will be judged as the person with the most questions solved in the shortest time. Instructions for receipt of prize money if participant is able to come to prize ceremony, unable and lives in India, or unable and lives abroad
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse73"> RULES </a>
+                                </p>
+                            </div>
+                            <div id="collapse73" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+                                        <ol>
+                                            <li>This is an individual event</li>
+                                            <li>A stable internet connection is recommended.</li>
+                                            <li>You must have an AXIS ’15 ID to participate. You can register here.</li>
+                                            <li>The decision of the event organizers in case of any dispute is final and binding.</li>
+                                        </ol>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+            <div class="content__item" id="content-9">
+				<img class="content__item-img rounded-right" src="assets/img/freakomatrix1.png" alt="turboflux" />
+				<div class="content__item-inner">
+					<div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse81"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse81" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                        Remember Shah Rukh Khan’s movie SWADES which received an overwhelmingly strong critical acclaim around the
+                                        globe where he sets up a small hydro-electric power plant that would solve the problem of irregular electricity
+                                        and make the village self-sufficient. That’s what define the event TURBO FLUX.
+                                    </p>
+                                    <p>
+                                        The basic applications of fluid mechanics is to be applied where the water is to be progressed from one point to 
+                                        another passing through various obstacles so that it falls over the turbine with sufficient velocity, rotates it 
+                                        and thus producing significant electricity. Knowledge of high school fluid mechanics and mere capability of 
+                                        application of them are just its prerequisite.
+                                    </p>
+                                    <p>
+                                        Think…Which pipe will you prefer V-shaped or a U-shaped for flow of water??
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse82"> PROBLEM STATEMENT </a>
+                                </p>
+                            </div>
+                            <div id="collapse82" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+                                        Participants have to take the water to a certain height using suction pumps (arena is shown in the fig.) overcoming 
+                                        obstacles in the path and various hurdles, as in water reaches the highest level with minimum losses. To measure the
+                                        energy possessed with the water, it is gushed on to the turbine which is coupled to dynamo and the voltage generated
+                                        is measured.
+                                    </p>
+                                    <p>
+                                        The obsctales will be disclosed on the day of the event and the sequence of the obsctacles will be decided by the participants.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse83">RULES</a>
+                                </p>
+                            </div>
+                            <div id="collapse83" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                        <ol type="I">
+                                            <li>Maximum Number of participants per team : 3</li>
+                                            <li>Participants should come with a turbine.</li>
+                                            <li>
+                                                <ol>Turbine specifications:
+                                                    <li>1.Diameter of turbine should not be more than 80 cm</li>
+                                                    <li>2.Bore diameter should be 6 mm.</li>
+                                                    <li>3.There is no restriction regarding type of material you use for making turbine.</li>
+                                                    <li>4.Weight of turbine should not be more than 1.5 kg.</li>
+                                                </ol>
+                                            </li>
+                                            <li>The turbine should be strictly to the specification we have provided. Deviation from it may cause disqualification.</li>
+                                            <li>The arrangement of the obsctacles and the pumps on the arena as well as mounting of the turbine will be done by the Turbo Flux organisers.</li>
+                                            <li>The participants will be allowed to control the time at which they want the pumps to be switched on.</li>
+                                            <li>Once the sequence of obstacles decided, no changes will be allowed.</li>
+                                            <li>Points will be there for using lesser number of pumps than allowed.</li>
+                                        </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse84"> JUDGING CRATERIA </a>
+                                </p>
+                            </div>
+                            <div id="collapse84" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ol>
+                                        <li>Time water takes from start to reach to turbine.</li>
+                                        <li>Voltage generated due to rotation of turbine.</li>
+                                        <li>Meanwhile, other minor criteria will be revealed that day itself.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse85"> FAQ </a>
+                                </p>
+                            </div>
+                            <div id="collapse85" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ol>
+                                        <li>
+                                            <p><b>
+                                                1.Is it chemical engineers event?
+                                                </b>
+                                            </p>
+                                            <p>
+                                               No, it is event for engineers of every branch. All you need to do is apply simple fluid mechanics concept studied in school. 
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p><b>
+                                                2.Is there any registration fees?
+                                                </b>
+                                            </p>
+                                            <p>
+                                                No, there is no registration fees. The only money that you have to spend is on making your own turbine. 
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p><b>
+                                               3. When do we get to know about the obstacles and what are its pre-requisite?
+                                                </b>
+                                            </p>
+                                            <p>
+                                                 On the day of event all the obstacles will be disclosed and then you have to decide how you have to arrange your obstacles. You just have to come with your turbine. 
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p><b>
+                                                4.Is there any guidance regarding making of turbine?
+                                                </b>
+                                            </p>
+                                            <p>
+                                               Yes, a workshop is held few days before the event to give you an idea regarding what are the various methods by which we can make turbine from daily use items and cost efficient. . 
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse86"> CONTACTS </a>
+                                </p>
+                            </div>
+                            <div id="collapse86" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+            <div class="content__item" id="content-10">
+                <img class="content__item-img rounded-right" src="assets/img/freakomatrix1.png" alt="freak o matrix" />
+				<div class="content__item-inner row">
+                    <div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse91"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse91" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                        Freak-O-Matix is heralded as one of the most challenging events of AXIS. A series of mathematical puzzles are posed. The series is divided into increasingly tough levels. Try not to freak out as you try to pave the way to numerical dominance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse92"> LEVELS </a>
+                                </p>
+                            </div>
+                            <div id="collapse92" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <h2>1. Test your skills</h2>
+                                    <ol>
+                                        <li>
+                                            <h3>ONLINE ROUND</h3>
+                                            <p>The sums posed are based on logic and arithmetic. They are subjective and test your reasoning. This round also provides a small window for us to peek into your brain. You are allowed to access the internet. A deadline, somewhere around a week’s length, will be given to solve these questions.</p>
+                                        </li>
+                                        <li>
+                                            <h3>OFFLINE ROUND</h3>
+                                            <p>The sums provided must be solved using old-school pen and paper. Scheduled on the first day of Axis, this round is also comprised of subjective questions. You are not allowed to access the internet. Three hours will be given to solve the paper. This event will be held in the VNIT campus.</p>
+                                        </li>
+                                    </ol>
+                                    <h2>2.Touring VNIT</h2>
+                                    <p>This is a treasure hunt. Teams must follow the clues provided and search for the objects hidden throughout the campus. First round qualifiers (from online and offline) will be sorted into groups of 6-8 contestants. The hunt will be held on the second day of Axis.</p>
+                                    <h2>Surprise Round</h2>
+                                    <p>
+                                        The contestants who quailed in the second round will be participating in this stage. This is a surprise round. This will also be scheduled on the second day of Axis.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse93">RULES</a>
+                                </p>
+                            </div>
+                            <div id="collapse93" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                        <ol type="I">
+											<li>Calculators are permitted for the first round. Information will be provided for further rounds.</li>
+                                            <li>Stationary, such as pens and paper, will be provided. All other paraphernalia must be accommodated by the contestant exclusively.</li>
+                                            <li>No internet usage will be encouraged at the time of offline rounds.</li>
+                                        </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse94"> JUDGING CRITERIA </a>
+                                </p>
+                            </div>
+                            <div id="collapse94" class="panel-collapse collapse">
+                                <div class="panel-body">
+									<ol>
+										<li>Axis and its organisers hold a strict policy on indecency and underhanded means of any kind. Do not to use any inappropriate measures in any of the rounds, if found doing so will the contestant will be disqualified from the game.</li>
+
+										<li>Judging is held without any external interference.</li>
+										
+										<li>The decisions conducted by the Freak-O-Matix team are fina</li>
+
+									</ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse96"> FAQ </a>
+                                </p>
+                            </div>
+                            <div id="collapse96" class="panel-collapse collapse">
+                                <div class="panel-body">
+									<ol>
+										<li>
+                                            <p>
+                                                <b>
+                                                  If a person gives online paper, is he/she eligible to give offline paper also?  
+                                                </b>
+                                            </p>
+											<p>
+                                                Yes, it is up to the interest of contestant he can give both the       rounds if they wish.
+                                            </p>
+										</li>
+										<li>
+											<p>
+                                                <b>
+                                                   Is there separate prize money for different rounds? 
+                                                </b>
+                                            </p>
+											<p>
+                                                Only online round will have separate prize money for the winner, rest all rounds will not have individual prize money.
+                                            </p>
+										</li>
+										<li>
+											<p>
+                                                <b>
+                                                    After online round is it compulsory to come to VNIT for further rounds?
+                                                </b>
+                                            </p>
+											<p>
+                                              Yes, it you want to continue further rounds you should be in VNIT.  
+                                            <p>
+										</li>
+										<li>
+											<p><b>I want to take part in more than one event in AXIS. Can I?</b></p>
+											<p>Yes, you can. AXIS team will make sure there is no clash of events.</p>
+
+										</li>
+										<li>
+											<p>
+                                                <b>
+                                                    Where should we stay during the time of AXIS if we got qualified for next rounds? Will we be provided with any accommodation?
+                                                </b>
+                                            </p>
+                                            <p>
+                                              We will try to provide you accommodation if required.  
+                                            </p> 
+										</li>
+									</ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+            <div class="content__item" id="content-11">
+                <img class="content__item-img rounded-right" src="assets/img/Aquahunt.JPG" alt="aqua hunt " />
+				<div class="content__item-inner row">
+                    <div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse101"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse101" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                        A terrible conflict is brewing in the Republic of Yemen, with two groups clashing in the battle for control of the country. Caught in the crossfire are millions of innocent Yemeni civilians and foreign nationals, which include over 5000 Indian citizens. 
+Operation Raahat has been launched by the Indian Armed Forces to keep India’s children safe. With military intelligence reporting the presence of ground-to-air missiles in the possession of terrorist groups, Army Command had deemed it unsafe to send in air transport. As the captain of the INS Sumitra, you have been placed under the direct command of Gen. V. K. Singh, and have been tasked with safely evacuating refugees from the Yemeni port of Aden to Djibouti across the Red Sea, where they will be picked up by the Indian Air Force. 
+This will be no easy feat. The hostile situation in the country ensures any rescue must be carried out swiftly and stealthily. To this end, your scouts have selected a small, discreet location to carry out the evacuation. Getting to this location will prove challenging, however, as it is located far inland, with narrow paths and choppy waters to hinder your movement. 
+Will you be able to reunite them with their families? 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse102"> LEVELS </a>
+                                </p>
+                            </div>
+                            <div id="collapse102" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ol>
+                                        <li>The basic task of the bot in the 1st Round will be to navigate safely through the arena and place the objects on strategic locations and points awarded will be proportional to the difficulty and reach of the checkpoints.</li>
+                                        <li>The objects correspond to our fellow citizens stuck in the catastrophic conditions in Yemen.</li>
+                                        <li>An idea about the strategic places can be found in the arena specifications. </li>
+                                        <li>If the objects (people) are dropped midway in water, they can be rescued from the raging ocean in a specified time period (Refer Rules) else they will be considered dead and cannot be rescued and points will be deducted for the same.</li>
+                                        <li>More than one object can be carried simultaneously by the bot to utilize the time properly. </li>
+                                        <li>The task focuses more on the bot’s grabbing efficiency and the navigator’s skill. </li>
+                                        <li>Ocean’s turbulence (minor) might be simulated and hence bot must be well designed to avoid toppling as hand touches will cause deduction in points. (Refer specifications for more).</li>
+                                        <li>Tasks for the subsequent round will be declared during the event although no modifications in the bot will be needed for completing them.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse104"> RULES </a>
+                                </p>
+                            </div>
+                            <div id="collapse104" class="panel-collapse collapse">
+                                <div class="panel-body">
+									<ol>
+										<li>Axis and its organisers hold a strict policy on indecency and underhanded means of any kind. Do not to use any inappropriate measures in any of the rounds, if found doing so will                                             the contestant will be disqualified from the game.</li>
+
+										<li>Judging is held without any external interference.</li>
+										
+										<li>The decisions conducted by the Aquahunt team is final</li>
+
+									</ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+            <div class="content__item" id="content-12">
+                <img class="content__item-img rounded-right" src="assets/img/dexter1.jpg" alt="dexter " />
+				<div class="content__item-inner row">
+                    <div class="panel-group" id="accordion">
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse111"> ABOUT </a>
+                                </p>
+                            </div>
+                            <div id="collapse111" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>
+                                        “Talent hits a target no one else can hit; Genius hits a target no one else can see.”
+                                    </p>
+                                    <p>
+Do you think you possess the ability to hit the bull’s eye of invisible targets? Can you find answers where others can’t see any?
+We bring to you an event that will push you to your limits and make you explore the genius residing inside. DEXTER is not just an aptitude test. It is a journey that puts your intellectual as well as interactive skills to test. Taking forward the huge success from last year, we present to you an opportunity to identify your skills. We will encourage and help you to enhance your endowments.
+Through DEXTER, we aim to not just find an intelligent kid, but to find and help groom a complete individual equipped with all the tools required to excel in this competitive world. Students will learn to open up their minds, think out of the box, and gain a whole new interactive experience. Also, a healthy competitive spirit will be inculcated among the participants.
+AXIS aims to slightly nudge the dexterity that resides in these minds and to provide a platform for them to showcase their competence, thus taking a step towards innovation and excellence.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse112"> RULES </a>
+                                </p>
+                            </div>
+                            <div id="collapse112" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ol>
+                                        <li>
+                                            <p><b>Registration fees -</b></p>
+                                            <p>Minimal registration fees of Rupees 30 will be charged.</p>
+                                        </li>
+                                        <li>
+                                            <p><b>Test dates -</b></p>
+                                            <p>Phase I- 29 June – 12 July 2015 (The schools can select any date from June 29-July 14 based on their convenience, provided the date has not been booked by other schools in the                                                 city. The exam will be conducted in a span of 1 hour in the school timings or otherwise)</p>
+                                            <p>Phase II- October 16-18 in Visvesvaraya National Institute of Technology, Nagpur</p>
+                                            </li>
+                                            <li>
+                                                <p><b>Structure of Question Paper -</b></p>
+                                                <p>11 questions, both subjective and objective testing data interpretation, logic deduction, and mental ability</p>
+                                            </li>
+                                        </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" detail panel panel-default">
+                            <div class="panel-heading">
+                                <p >
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse114"> JUDGING CRITERIA </a>
+                                </p>
+                            </div>
+                            <div id="collapse114" class="panel-collapse collapse">
+                                <div class="panel-body">
+									<ol>
+										<li>
+                                            <p>
+                                                <b>
+                                                    Round 1:-
+                                                </b>
+                                            </p>
+                                            <p>
+Purely merit based. After analyzing all the papers, cutoff will be decided “RELATIVELY” based on the overall performance. There is no “ABSOLUTE” cutoff pre-decided. Keeping in mind the fact that a 12th grade child may have an edge over an 8th class child, cutoff for lower classes can be assumed to be lower than the higher classes, so as not give any advantage of age/experience to higher class students.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <b>
+                                                    Round 2:-
+                                                </b>
+                                            </p>
+                                            <p>
+Round 2 remains a surprise for the children with many skills to be judged on, thus, every individual is carefully scrutinized according to the skill which the round tests. A marking system is devised and based on the individual performance; he/she is allotted marks accordingly. Toppers are then decided on their total score of Round 2 (Round 1 marks don’t play any role here).
+                                            </p>
+                                        </li>
+									</ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<button class="button button--close"><i class="icon icon--circle-cross white"></i><span class="text-hidden">Close content</span></button>
+		</section>
+	</div>
+	<script src="js/classie.js"></script>
+	<script src="js/dynamics.min.js"></script>
+	<script src="js/mainevent.js"></script>
+</body>
+</html>

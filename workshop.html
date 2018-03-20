@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Blueprint: On Scroll Effect Layout</title>
+		<meta name="description" content="Blueprint: On Scroll Effect Layout" />
+		<meta name="keywords" content="on scroll, effect, slide in, layout, template, transition, javascript" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="cssevent/demo.css" />
+		<link rel="stylesheet" type="text/css" href="cssevent/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-override.css"/>
+		<link rel="stylesheet" type="text/css" href="cssnav/component-nav.css"/>
+		<link rel="stylesheet" type="text/css" href="cssnav/custom-nav.css"/>
+		<link rel="stylesheet" href="cssnav/default-nav.css"/>
+		<link href=" css/bootstrap.css"  rel="stylesheet"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="jsevent/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="main clearfix">
+            <nav id="menu" class="nav">					
+                <ul>
+                    <li>
+                        <a href="http://plugins.compzets.com">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Workshops</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Exhibitions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Sponsors</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Contacts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/final.png" width="80%"/>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+		</div>
+	<script>
+			//  The function to change the class
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+			//  Creating our button in JS for smaller screens
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="fa fa-bars"> </i> Menu</button>');
+
+			//  Toggle the class on click to show / hide the menu
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+		</script>
+		</div>
+		<div class="container-fluid">
+			<div id="cbp-so-scroller" class="cbp-so-scroller">
+				<section class="cbp-so-section">
+					<article class="cbp-so-side cbp-so-side-left">
+						<h2>Haptic Robotic Arm</h2>
+						<p>Haptics is the science of applying touch sensation and control for interaction with virtual or physical applications.In this workshop you will learn how to interface human hand movements with the help of sensors and mimic similar movements in a robotic arm. Haptics is one of the growing areas in human- computer collaboration which deals with sensory interaction with computers.Haptics technology has a vast scope in different fields like robot assisted surgery, exploration of hazardous environments and even modern video games sensing human motion.The workshop will be conducted for 2 days (16 hrs) with each day divided into 2 sessions.</p>
+						<a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="#" onclick='window.open("/registration/haptic", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");'>Register</a>
+					</article>
+					<figure class="cbp-so-side cbp-so-side-right">
+						<img src="images/haptic.jpg" alt="img01">
+					</figure>
+				</section>
+				<section class="cbp-so-section">
+					<figure class="cbp-so-side cbp-so-side-left">
+						<img src="images/bridge.jpg" alt="img01">
+					</figure>
+					<article class="cbp-so-side cbp-so-side-right">
+						<h2>Bridge Construction</h2>
+						<p>Be it the Golden Gate Bridge of San Francisco or the London Bridge, bridges have always been awe-inspiring. Their sheer magnitude, beauty and utility has made them the landmarks of many a towns and cities. They not only signify strength but also a symbol of development, connecting people all over the world. 
+Bridge building and construction is an essential part of the civil engineering discipline. The workshop shall give the participants a hand-on experience on the topic to all the pursuing civil engineers. A lecture session will be taken by the experts on CAD based Bridge design which shall be followed by fabrication and testing of the bridge model. The lecture session shall also consist of the different types of bridges existing, structural response of bridges to different types of moving loads and load calculation in various truss using a CAD model.
+Certificate: All the participants will be given a certificate individually certified by AXIS, VNIT Nagpur and ARK technosolutions.</p>
+					</article>
+				</section>
+				<section class="cbp-so-section">
+					<article class="cbp-so-side cbp-so-side-left">
+						<h2>Cloud Computing</h2>
+						<p>Ever since the discovery of a computer the world has gone digital. With a storage limit of over hundreds of gigabytes nothing has made man’s life simpler than this. The queues can no longer be seen at the billing counter and the stores no longer throng with people. A click of a button does it all from paying telephone and electricity bills to ordering items of daily requirement.
+A very new feature of computer services is Cloud computing, or in simpler shorthand just "the cloud", which also focuses on maximizing the effectiveness of the shared resources. Cloud resources are usually not only shared by multiple users but are also dynamically reallocated per demand. 
+Certificate: All the participants will be given a certificate individually certified by AXIS, VNIT Nagpur and TechBharat.</p>
+					</article>
+					<figure class="cbp-so-side cbp-so-side-right">
+						<img src="images/cloud.jpg" alt="img01">
+					</figure>
+				</section>
+				<section class="cbp-so-section">
+					<figure class="cbp-so-side cbp-so-side-left">
+						<img src="images/quadd.jpg" alt="img01">
+					</figure>
+					<article class="cbp-so-side cbp-so-side-right">
+						<h2>Quad Copter</h2>
+						<p>With the advent of 21st century, the world changed in ways one could not imagine. Technology advanced in leaps and bounds, touching our lives in numerous ways. One of them was the ability of man to fly. With the invention of the first airplanes and helicopters, there was a constant desire to increase their efficiency.
+Based on the same concept of helicopters, quadcopter was introduced. Quadcopter is a multi-rotor helicopter that is lifted and propelled by 4 motors. Early in the history of flight, quadcopter (then referred to as 'quadrotor') configurations were seen as possible solutions to some of the persistent problems in vertical flight, real time systems and robotics. 
+Certificate: All the participants will be given a certificate individually certified by AXIS, VNIT Nagpur and ARK technosolutions.</p>
+					</article>
+				</section>
+			</div>
+		</div>
+		<script src="jsevent/classie.js"></script>
+		<script src="jsevent/cbpScroller.js"></script>
+		<script>
+			new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
+		</script>
+	</body>
+</html>

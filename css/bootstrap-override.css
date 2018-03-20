@@ -1,0 +1,25 @@
+.panel-group .panel .panel-heading{
+    background: transparent;
+    border: 2px solid white;
+    color : white;
+}
+.panel-group .panel .panel-heading p a{
+    color:white;
+}
+body{
+    background: #3d4d4d;
+}
+.white{
+    color:white;
+}
+.panel-group .panel{
+    background: transparent;
+}
+.panel-group , .panel-group .panel {
+    min-width: 600px;
+}
+@media screen and (max-width:768px){
+    .panel-group , .panel-group .panel {
+        min-width: 400px;
+    }
+}

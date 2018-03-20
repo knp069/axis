@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Blueprint: Google Grid Gallery</title>
+		<meta name="description" content="Blueprint: Blueprint: Google Grid Gallery" />
+		<meta name="keywords" content="google getting started gallery, image gallery, image grid, template, masonry" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="csscontact/demo.css" />
+		<link rel="stylesheet" type="text/css" href="csscontact/component.css" />
+		<link rel="stylesheet" type="text/css" href="cssnav/component-nav.css"/>
+		<link rel="stylesheet" type="text/css" href="cssnav/custom-nav.css"/>
+		<link rel="stylesheet" href="cssnav/default-nav.css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="jscontact/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			 <div class="main clearfix">
+            <nav id="menu" class="nav">					
+                <ul>
+                    <li>
+                        <a href="http://plugins.compzets.com">
+                            <span class="icon">
+                                <i aria-hidden="true" class="fa fa-home"></i>
+                            </span>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="$('#section-2').animatescroll();">
+                            <span class="icon"> 
+                                <i aria-hidden="true" class="fa fa-crosshairs"></i>
+                            </span>
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="$('#section-3').animatescroll();">
+                            <span class="icon">
+                                <i aria-hidden="true" class="fa fa-cog"></i>
+                            </span>
+                            <span>Workshops</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="$('#section-4').animatescroll();">
+                            <span class="icon">
+                                <i aria-hidden="true" class="fa fa-television"></i>
+                            </span>
+                            <span>Exhibitions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="$('#section-5').animatescroll();">
+                            <span class="icon">
+                                <i aria-hidden="true" class="fa fa-money"></i>
+                            </span>
+                            <span>Sponsors</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="$('#section-6').animatescroll();">
+                            <span class="icon">
+                                <i aria-hidden="true" class="fa fa-user"></i>
+                            </span>
+                            <span>Contacts</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+		</div>
+	<script>
+			//  The function to change the class
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+			//  Creating our button in JS for smaller screens
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="fa fa-bars"> </i> Menu</button>');
+
+			//  Toggle the class on click to show / hide the menu
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+		</script>
+			<div id="grid-gallery" class="grid-gallery">
+				<section class="grid-wrap">
+					<ul class="grid">
+						<li class="grid-sizer"></li>
+						<li>
+							<figure>
+								<img src="assets/img/m.jpg" alt="img01"/>
+								<figcaption><h3>Dr. Y.B. Katpatal</h3><p>Professor In-charge , AXIS'15</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="assets/img/m.jpg" alt="img02"/>
+								<figcaption><h3>Dr. Vijaykumar</h3><p>Professor In-charge , AXIS'15</p></figcaption>
+							</figure>
+						</li>
+					</ul>
+				</section><!-- // grid-wrap -->
+				<section class="slideshow">
+					<ul>
+						<li>
+							<figure>
+								<figcaption>
+									<h3>Dr. Y.B. Katpatal</h3>
+									<p>Professor In-charge</p>
+									<p>AXIS'15</p>
+								</figcaption>
+								<img src="assets/img/m.jpg" alt="img01"/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<figcaption>
+									<h3>Dr. Vijaykumar</h3>
+									<p>Professor In-charge</p>
+									<p>AXIS'15</p>
+								</figcaption>
+								<img src="assets/img/m.jpg" alt="img02"/>
+							</figure>
+						</li>
+					</ul>
+					<nav>
+						<span class="icon nav-prev"></span>
+						<span class="icon nav-next"></span>
+						<span class="icon nav-close"></span>
+					</nav>
+					<div class="info-keys icon">Navigate with arrow keys</div>
+				</section><!-- // slideshow -->
+			</div><!-- // grid-gallery -->
+		</div>
+		<script src="jscontact/imagesloaded.pkgd.min.js"></script>
+		<script src="jscontact/masonry.pkgd.min.js"></script>
+		<script src="jscontact/classie.js"></script>
+		<script src="jscontact/cbpGridGallery.js"></script>
+		<script>
+			new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+		</script>
+	</body>
+</html>
